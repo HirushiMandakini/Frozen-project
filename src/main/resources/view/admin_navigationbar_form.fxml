@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="707.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AdminNavigationbarFormController">
+    <children>
+        <AnchorPane layoutX="138.0" prefHeight="92.0" prefWidth="762.0" style="-fx-background-color: #ECF9FF;">
+            <children>
+                <Text layoutX="542.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="113.60000000000002">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="672.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/data.png" />
+                    </image>
+                </ImageView>
+                <DatePicker layoutX="394.0" layoutY="32.0" prefHeight="26.0" prefWidth="114.0" promptText="DD/MM/YYYY" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="707.0" prefWidth="143.0" style="-fx-background-color: #F4EEEE;">
+            <children>
+                <Button layoutX="16.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="50.0" prefWidth="114.0" text="Customer">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/operator_10578507.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="16.0" layoutY="223.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="50.0" prefWidth="113.0" text="Supplier">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/supplier_8992959.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="16.0" layoutY="280.0" mnemonicParsing="false" onAction="#btnProductOnAction" prefHeight="50.0" prefWidth="113.0" text="Product">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/drink_2738730.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="16.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnDeliveryOnAction" prefHeight="50.0" prefWidth="113.0" text="Delivery">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/delivery-bike.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="16.0" layoutY="507.0" mnemonicParsing="false" onAction="#btnDriverOnAction" prefHeight="50.0" prefWidth="113.0" text="      Driver">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="16.0" layoutY="565.0" mnemonicParsing="false" onAction="#btnVehicleOnAction" prefHeight="50.0" prefWidth="113.0" text="          Vehicle">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="60.0" fitWidth="53.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/user-gear.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="38.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" wrappingWidth="53.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="31.0" layoutY="515.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/driver.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="16.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="50.0" prefWidth="113.0" text="Employee">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/networking_1006541.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="16.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnInventoryOnAction" prefHeight="50.0" prefWidth="113.0" text="Inventory">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/fruits_8607131.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="16.0" layoutY="394.0" mnemonicParsing="false" onAction="#btnOrderOnAction" prefHeight="50.0" prefWidth="113.0" text="    Order">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="25.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/received.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="16.0" layoutY="621.0" mnemonicParsing="false" onAction="#btnIncomeOnAction" prefHeight="50.0" prefWidth="113.0" text="Income">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/salary.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="31.0" layoutY="573.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/car.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+      <AnchorPane fx:id="pane" layoutX="149.0" layoutY="92.0" prefHeight="616.0" prefWidth="751.0" />
+    </children>
+</AnchorPane>

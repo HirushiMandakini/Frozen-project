@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="616.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PlaceOrderFormController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="616.0" prefWidth="762.0" style="-fx-background-color: #FCF8E8;">
+         <children>
+            <Text layoutX="47.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Manage Form" wrappingWidth="233.3367919921875">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnOrderAdd" layoutX="516.0" layoutY="259.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="32.0" prefWidth="65.0" text="Add">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnClear" layoutX="612.0" layoutY="259.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: -#e74c3c;" text="Clear" textFill="#282626">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/sweeping_8888289.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="47.0" layoutY="96.0" prefHeight="18.0" prefWidth="47.0" text="Oder Id">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="239.0" layoutY="96.0" prefHeight="18.0" prefWidth="58.0" text="Product ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="395.0" layoutY="96.0" prefHeight="18.0" prefWidth="58.0" text="Unit Price">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="576.0" layoutY="188.0" prefHeight="18.0" prefWidth="36.0" text="Price">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="232.0" layoutY="188.0" prefHeight="18.0" prefWidth="106.0" text="Customer Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="188.0" prefHeight="18.0" prefWidth="58.0" text="Qty">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="96.0" prefHeight="18.0" prefWidth="74.0" text="Product Id">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="395.0" layoutY="188.0" prefHeight="18.0" prefWidth="74.0" text="Customer Id">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbloId" layoutX="47.0" layoutY="128.0" prefHeight="18.0" prefWidth="97.0" />
+            <Label fx:id="lblUnitPrice" layoutX="395.0" layoutY="128.0" prefHeight="18.0" prefWidth="97.0" />
+            <Label fx:id="lblPId" layoutX="564.0" layoutY="128.0" prefHeight="18.0" prefWidth="97.0" />
+            <TextField fx:id="txtQty" layoutX="35.0" layoutY="216.0" prefHeight="26.0" prefWidth="58.0" />
+            <Label fx:id="lblCusId" layoutX="395.0" layoutY="220.0" prefHeight="18.0" prefWidth="97.0" />
+            <Label fx:id="lblPrice" layoutX="563.0" layoutY="220.0" prefHeight="18.0" prefWidth="97.0" />
+            <TableView fx:id="tblOrder" layoutX="8.0" layoutY="350.0" prefHeight="200.0" prefWidth="746.0">
+              <columns>
+                <TableColumn fx:id="col1ProId" prefWidth="121.60004234313965" text="Product Id" />
+                <TableColumn fx:id="col2proName" prefWidth="122.39996337890625" text="Product Name" />
+                  <TableColumn fx:id="col3Qty" prefWidth="129.5999755859375" text="Qty" />
+                  <TableColumn fx:id="col4UnitPrice" prefWidth="126.4000244140625" text="Unit Price" />
+                  <TableColumn fx:id="col5Price" prefWidth="120.80001831054688" text="Price" />
+                  <TableColumn fx:id="col6Action" prefWidth="125.5999755859375" text="Action" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="cmboProduct" layoutX="193.0" layoutY="124.0" onAction="#cmbProductOnAction" prefWidth="150.0" />
+            <ComboBox fx:id="comboCusName" layoutX="193.0" layoutY="216.0" onAction="#cmbCusNameOnAction" prefWidth="150.0" />
+            <Label layoutX="545.0" layoutY="27.0" prefHeight="18.0" prefWidth="36.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="589.0" layoutY="27.0" prefHeight="18.0" prefWidth="120.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </children>
+</AnchorPane>
