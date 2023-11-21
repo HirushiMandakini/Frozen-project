@@ -1,4 +1,6 @@
 package org.example.dto;
+
+
 import lombok.*;
 
 @AllArgsConstructor
@@ -7,8 +9,9 @@ import lombok.*;
 @Setter
 @ToString
 
-public class deliveryDto {
- private String id;
- private String address;
- private String driver_id;
+public class UserDto {
+    private String u_id;
+    private String u_password;
+    private String u_email;
+
 }

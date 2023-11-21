@@ -14,6 +14,7 @@ import org.example.model.EmployeeFormModel;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class EmployeeFormController {
 
@@ -109,29 +110,71 @@ public class EmployeeFormController {
     }
     @FXML
     void btnEmpAddOnAction(ActionEvent event) {
-        String id = eId.getText();
-        String name = eName.getText();
-        String address = eAdd.getText();
-        String email = eEmail.getText();
-        String contact_num=eCon.getText();
+  /*      boolean isEmployeeIDValidated = ValidateEmployee();
+        boolean isEmployeeNameValidated = ValidateEmployee();
+        boolean isEmployeeAddressValidated = ValidateEmployee();
+        boolean isEmployeeTelValidated = ValidateEmployee();
 
-        var dto = new employeeDto(id, name, address, email,contact_num);
-        try {
-            boolean isSaved = empModel.addEmployee(dto);
-            if (isSaved){
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "employee saved!");
-                alert.showAndWait();
-                loadAllEmployee();
-                clearFields();
-            }else{
-                Alert alert = new Alert(Alert.AlertType.ERROR,"Something went wrong!!!");
-                alert.showAndWait();
-                clearFields();
+        if (isEmployeeIDValidated && isEmployeeNameValidated && isEmployeeAddressValidated && isEmployeeTelValidated) {*/
+            String id = eId.getText();
+            String name = eName.getText();
+            String address = eAdd.getText();
+            String email = eEmail.getText();
+            String contact_num = eCon.getText();
+
+            var dto = new employeeDto(id, name, address, email, contact_num);
+            try {
+                boolean isSaved = empModel.addEmployee(dto);
+                if (isSaved) {
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "employee saved!");
+                    alert.showAndWait();
+                    loadAllEmployee();
+                    clearFields();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "Something went wrong!!!");
+                    alert.showAndWait();
+                    clearFields();
+                }
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             }
-        }catch(SQLException e){
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+   //  }
         }
-    }
+        private boolean ValidateEmployee(){
+
+            String idText = eId.getText();
+            boolean isCustomerIDValidated = Pattern.compile("[E][0-9]{3}").matcher(idText).matches();
+
+            if (!isCustomerIDValidated) {
+                new Alert(Alert.AlertType.ERROR, "invalid employee id!").show();
+                return false;
+            }
+            String nameText = eName.getText();
+            boolean isCustomerNameValidated = Pattern.compile("[A-z](.*)").matcher(nameText).matches();
+            if (!isCustomerNameValidated) {
+                new Alert(Alert.AlertType.ERROR, "invalid employee name!").show();
+                return false;
+            }
+            String addressText = eAdd.getText();
+            boolean isCustomerAddressValidated = Pattern.compile("[A-z][0-9](.*)").matcher(addressText).matches();
+            if (!isCustomerAddressValidated) {
+                new Alert(Alert.AlertType.ERROR, "invalid customer address!").show();
+                return false;
+            }
+            String emailText = eEmail.getText();
+            boolean isCustomerEmailValidated = Pattern.compile("[A-z][0-9]{10}").matcher(emailText).matches();
+            if (!isCustomerEmailValidated) {
+                new Alert(Alert.AlertType.ERROR, "invalid customer Email!").show();
+                return false;
+            }
+            String contact_num = eCon.getText();
+            boolean isCustomerConValidated = Pattern.compile("[0-9]{12}").matcher(contact_num).matches();
+            if (!isCustomerConValidated) {
+                new Alert(Alert.AlertType.ERROR, "invalid customer Contact Number!").show();
+                return false;
+            }
+            return true;
+        }
     @FXML
     void btnEmpDeleteOnAction(ActionEvent event) {
         String id = eId.getText();

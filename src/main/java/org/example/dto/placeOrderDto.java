@@ -1,7 +1,8 @@
 package org.example.dto;
 import lombok.*;
-import org.example.dto.tm.orderTm;
+import org.example.dto.tm.cartTm;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,11 +13,10 @@ import java.util.List;
 @Setter
 @ToString
 
-public class orderDto {
+public class placeOrderDto {
     private String o_id;
-    private Date date;
-    private String payment_id;
-    private String deli_id;
+    private LocalDate date;
     private String cus_id;
-    private List<orderTm> orderTmList = new ArrayList<>();
+    private String amount;
+    private List<cartTm> cartTmList = new ArrayList<>();
 }

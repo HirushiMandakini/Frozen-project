@@ -21,6 +21,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.regex.Pattern;
 
 
 public class CustomerFormController {
@@ -100,29 +101,80 @@ public class CustomerFormController {
         txtCon.setText("");
     }
     public void btnCusAddOnAction(ActionEvent actionEvent) {
-        String id = txtId.getText();
-        String name = txtName.getText();
-        String address = txtAdd.getText();
-        String email = txtEmail.getText();
-        String contact_num=txtCon.getText();
+      /*  boolean isCustomerIDValidated = ValidateCustomer();
+        boolean isCustomerNameValidated = ValidateCustomer();
+        boolean isCustomerAddressValidated = ValidateCustomer();
+        boolean isCustomerTelValidated = ValidateCustomer();
 
-        var dto = new customerDto(id, name, address, email,contact_num);
-        try {
-            boolean isSaved = cusModel.addCustomer(dto);
-            if (isSaved) {
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "customer saved!");
-                alert.showAndWait();
-                loadAllCustomer();
-                clearFields();
-            }else {
-                Alert alert = new Alert(Alert.AlertType.ERROR,"Something went wrong!!!");
-                alert.showAndWait();
-                clearFields();
+        if (isCustomerIDValidated && isCustomerNameValidated && isCustomerAddressValidated && isCustomerTelValidated) {*/
+            String id = txtId.getText();
+            String name = txtName.getText();
+            String address = txtAdd.getText();
+            String email = txtEmail.getText();
+            String contact_num = txtCon.getText();
+
+            var dto = new customerDto(id, name, address, email, contact_num);
+            try {
+                boolean isSaved = cusModel.addCustomer(dto);
+                if (isSaved) {
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "customer saved!");
+                    alert.showAndWait();
+                    loadAllCustomer();
+                    clearFields();
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "Something went wrong!!!");
+                    alert.showAndWait();
+                    clearFields();
+                }
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             }
-        } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
-        }
+
+      //  }
     }
+    private boolean ValidateCustomer() {
+        //validate customer id//    C001
+
+        String idText = txtId.getText();
+        boolean isCustomerIDValidated = Pattern.compile("[C][0-9]{3}").matcher(idText).matches();
+        // boolean  isCustomerIDValidated  =Pattern.matches("[C][0-9]{3}",idText);
+        if (!isCustomerIDValidated) {
+            new Alert(Alert.AlertType.ERROR, "invalid customer id!").show();
+            return false;
+        }
+        String nameText = txtName.getText();
+        boolean isCustomerNameValidated = Pattern.compile("[A-z](.*)").matcher(nameText).matches();
+        // boolean  isCustomerNameValidated  =Pattern.matches("[A-z][a-z](.*)(pala)",nameText);
+        if (!isCustomerNameValidated) {
+            new Alert(Alert.AlertType.ERROR, "invalid customer name!").show();
+            return false;
+        }
+        String addressText = txtAdd.getText();
+        boolean isCustomerAddressValidated = Pattern.compile("[A-z]").matcher(addressText).matches();
+        // boolean  isCustomerAddressValidated  =Pattern.matches("[A-z][a-z](.*)(city)",addressText);
+        if (!isCustomerAddressValidated) {
+            new Alert(Alert.AlertType.ERROR, "invalid customer address!").show();
+            return false;
+        }
+
+        String emailText = txtEmail.getText();
+        boolean isCustomerEmailValidated = Pattern.compile("[A-z][0-9]{10}").matcher(emailText).matches();
+        // boolean  isCustomerTelValidated  =Pattern.matches("[0-9]{10}",telText);
+        if (!isCustomerEmailValidated) {
+            new Alert(Alert.AlertType.ERROR, "invalid customer Email!").show();
+            return false;
+        }
+        String contact_num = txtCon.getText();
+        boolean isCustomerConValidated = Pattern.compile("[0-9]{12}").matcher(contact_num).matches();
+        // boolean  isCustomerConValidated  =Pattern.matches("[0-9]{10}",telText);
+        if (!isCustomerConValidated) {
+            new Alert(Alert.AlertType.ERROR, "invalid customer Contact Number!").show();
+            return false;
+        }
+        return true;
+}
+
+
     public void btnCusDeleteOnAction(ActionEvent actionEvent) {
         String id = txtId.getText();
 
@@ -147,22 +199,23 @@ public class CustomerFormController {
         String email = txtEmail.getText();
         String contact_num = txtCon.getText();
 
-        var dto = new customerDto(id, name, address, email,contact_num);
+        var dto = new customerDto(id, name, address, email, contact_num);
         try {
             boolean isUpdated = cusModel.updateCustomer(dto);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "customer updated!").show();
                 loadAllCustomer();
                 clearFields();
-            }  else {
-            new Alert(Alert.AlertType.CONFIRMATION, "customer not updated!").show();
-        }
+            } else {
+                new Alert(Alert.AlertType.CONFIRMATION, "customer not updated!").show();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
-    }
-    }
+    }}
+
+
 
 
 

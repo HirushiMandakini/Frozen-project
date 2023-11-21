@@ -77,11 +77,11 @@ public class CustomerFormModel {
 
     }
 
-    public static customerDto getCustomerByName(String name) throws SQLException {
+    public static customerDto getCustomerById(String id) throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
-        String sql = "SELECT * FROM customer WHERE cus_name =?";
+        String sql = "SELECT * FROM customer WHERE cus_id =?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setString(1,name );
+        preparedStatement.setString(1,id );
         ResultSet resultSet = preparedStatement.executeQuery();
         if(resultSet.next()){
             customerDto customerDto = new customerDto();

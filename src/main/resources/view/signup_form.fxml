@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="572.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SignupFormController">
+   <children>
+      <Label layoutX="302.0" layoutY="49.0" prefHeight="35.0" prefWidth="198.0" text="User Registration">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="140.0" prefHeight="18.0" prefWidth="119.0" text="Input your name*" />
+      <Label layoutX="80.0" layoutY="204.0" prefHeight="18.0" prefWidth="40.0" text="Email*" />
+      <TextField fx:id="txtUserName" layoutX="80.0" layoutY="158.0" prefHeight="28.0" prefWidth="214.0" />
+      <TextField fx:id="txtEmail" layoutX="80.0" layoutY="232.0" prefHeight="28.0" prefWidth="214.0" />
+      <Label layoutX="80.0" layoutY="286.0" prefHeight="18.0" prefWidth="69.0" text="Password*" />
+      <TextField fx:id="txtPw" layoutX="80.0" layoutY="314.0" prefHeight="28.0" prefWidth="214.0" />
+      <JFXButton layoutX="250.0" layoutY="412.0" onAction="#btnRegisterOnAction" prefHeight="28.0" prefWidth="214.0" style="-fx-background-color: #eb4d4b;" text="Create Acount" />
+      <Hyperlink layoutX="330.0" layoutY="460.0" onAction="#hyperLoginHereOnAction" prefHeight="24.0" prefWidth="70.0" text="Login here" />
+   </children>
+</AnchorPane>

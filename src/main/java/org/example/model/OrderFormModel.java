@@ -1,9 +1,10 @@
 package org.example.model;
 
 import org.example.db.Dbconnection;
-import org.example.dto.orderDto;
+import org.example.dto.placeOrderDto;
 
 import java.sql.*;
+import java.time.LocalDate;
 
 public class OrderFormModel {
     public String generateNextOrderId() throws SQLException {
@@ -30,20 +31,25 @@ public class OrderFormModel {
             return "O001";
         }
     }
-    public boolean addOrder(orderDto dto) throws SQLException {
+    public boolean saveOrder(placeOrderDto dto) throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
 
-        String sql = "INSERT INTO orders VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO orders VALUES(?,?,?,?)";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1, dto.getO_id());
-        pstm.setDate(2, (Date) dto.getDate());
-        pstm.setString(3, dto.getPayment_id() );
-        pstm.setString(3, dto.getDeli_id());
-        pstm.setString(4, dto.getCus_id());
+        pstm.setDate(2, Date.valueOf(dto.getDate()));
+        pstm.setString(3, dto.getCus_id() );
+        pstm.setString(4, dto.getAmount());
+
 
         boolean isAdded = pstm.executeUpdate() > 0;
         return isAdded;
     }
+
+
+    public boolean saveOrder(String orderId, LocalDate date, String paymentId, String deliveryId, String customerId) {
+        return false;
     }
+}
 

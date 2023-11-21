@@ -12,7 +12,4 @@ public class productDto {
     private String name;
     private double price;
 
-    public String getCode() {
-        return null;
-    }
 }

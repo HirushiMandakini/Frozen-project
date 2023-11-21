@@ -10,7 +10,7 @@ import lombok.*;
     public class deliveryTm {
         private String id;
         private String address;
-        private String model;
+        private String driver_id;
     }
 
 

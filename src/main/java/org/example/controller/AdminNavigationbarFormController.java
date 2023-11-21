@@ -84,7 +84,7 @@ public class AdminNavigationbarFormController{
 
         public void btnOrderOnAction(ActionEvent actionEvent) throws IOException {
                 this.pane.getChildren().clear();
-                this.pane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/order_form.fxml")));
+                this.pane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/place_order_form.fxml")));
 
         }
 

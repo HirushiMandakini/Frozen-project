@@ -12,7 +12,7 @@ public class AppInitializer extends Application {
         launch(args);
     }
     public void start(Stage primaryStage)throws IOException{
-        Parent parent=FXMLLoader.load(this.getClass().getResource("/view/admin_navigationbar_form.fxml"));
+        Parent parent=FXMLLoader.load(this.getClass().getResource("/view/login_page.fxml"));
         Scene scene=new Scene(parent);
         primaryStage.setScene(scene);
         primaryStage.centerOnScreen();

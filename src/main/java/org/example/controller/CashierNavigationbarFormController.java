@@ -30,7 +30,7 @@ public class CashierNavigationbarFormController {
 
     public void btnOrderOnAction(ActionEvent actionEvent) throws IOException {
         this.subRoot.getChildren().clear();
-        this.subRoot.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/order_form.fxml")));
+        this.subRoot.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/place_order_form.fxml")));
 
     }
 

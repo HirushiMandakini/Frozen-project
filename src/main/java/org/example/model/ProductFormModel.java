@@ -1,8 +1,8 @@
 package org.example.model;
 
 import org.example.db.Dbconnection;
-import org.example.dto.customerDto;
 import org.example.dto.productDto;
+import org.example.dto.tm.cartTm;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductFormModel {
-    public List<productDto> getAllProduct() throws SQLException {
+    private cartTm[] cartTm;
+
+    public static List<productDto> loadAllProduct() throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
 
         String sql = "SELECT * FROM products";
@@ -34,7 +36,7 @@ public class ProductFormModel {
         return dtoList;
     }
 
-    public boolean addProduct(productDto dto) throws SQLException {
+    public static boolean saveProduct(productDto dto) throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
 
         String sql = "INSERT INTO products VALUES(?,?,?)";
@@ -58,7 +60,27 @@ public class ProductFormModel {
         boolean isDeleted = pstm.executeUpdate()>0;
         return isDeleted;
     }
-    public boolean updateProduct(productDto dto) throws SQLException {
+    public productDto searchProduct(String id) throws SQLException {
+        Connection connection = Dbconnection.getInstance().getConnection();
+        String sql = "SELECT * FROM products WHERE p_id = ?";
+
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, id);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        productDto dto = null;
+
+        if(resultSet.next()) {
+            dto = new productDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getDouble(3)
+            );
+        }
+        return dto;
+    }
+    public static boolean updateProduct(productDto dto) throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
 
         String sql = "UPDATE products SET p_name = ?,price = ? WHERE p_id=?";
@@ -71,6 +93,7 @@ public class ProductFormModel {
         boolean isUpdated = pstm.executeUpdate() > 0;
         return isUpdated;
     }
+
 }
 
 
