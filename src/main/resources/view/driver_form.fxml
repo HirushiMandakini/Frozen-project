@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -13,82 +14,145 @@
 
 <AnchorPane prefHeight="616.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.DriverFormController">
     <children>
-        <AnchorPane prefHeight="616.0" prefWidth="762.0" style="-fx-background-color: #FCF8E8;">
+        <AnchorPane prefHeight="762.0" prefWidth="1175.0" style="-fx-background-color: F5F7F8; -fx-background-radius: 40;">
             <children>
-                <Text layoutX="47.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Manage Form" wrappingWidth="233.3367919921875">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                </Text>
-                <Text layoutX="47.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Id" wrappingWidth="73.336669921875">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <Text layoutX="47.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Name" wrappingWidth="64.53668212890625">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <Text layoutX="47.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Address" wrappingWidth="64.53668212890625">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <TextField fx:id="dId" layoutX="132.0" layoutY="68.0" prefHeight="26.0" prefWidth="194.0" />
-                <TextField fx:id="dName" layoutX="132.0" layoutY="106.0" prefHeight="26.0" prefWidth="194.0" />
-                <TextField fx:id="dAddress" layoutX="132.0" layoutY="152.0" prefHeight="26.0" prefWidth="194.0" />
-                <Text layoutX="409.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number" wrappingWidth="64.53668212890625">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <TextField fx:id="dCon" layoutX="497.0" layoutY="68.0" prefHeight="26.0" prefWidth="194.0" />
-                <Button fx:id="driAdd" layoutX="120.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnDriAddOnAction" prefHeight="32.0" prefWidth="65.0" text="Add">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/plus.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="driUpdate" layoutX="229.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnDriUpdateOnAction" prefHeight="32.0" prefWidth="80.0" text="Update">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/refresh.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <TableView fx:id="tblDriver" layoutX="66.0" layoutY="301.0" prefHeight="315.0" prefWidth="629.0" style="-fx-background-color: #F7FFE5;">
-                    <columns>
-                        <TableColumn fx:id="col1Id" minWidth="0.0" prefWidth="149.60003662109375" text="Driver Id" />
-                        <TableColumn fx:id="col2Name" minWidth="0.0" prefWidth="159.20001220703125" text="Driver Name" />
-                        <TableColumn fx:id="col3Add" minWidth="0.0" prefWidth="157.60000610351562" text="Driver Address" />
-                        <TableColumn fx:id="col4Con" minWidth="0.0" prefWidth="156.7999267578125" text="Contact Number" />
-                    </columns>
-                </TableView>
-                <Button fx:id="driDelete" layoutX="480.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnDriDeleteOnAction" prefHeight="32.0" prefWidth="80.0" text="Delete">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/delete.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-            <Button fx:id="driClear" layoutX="353.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnDriClearOnAction" prefHeight="32.0" prefWidth="80.0" text="   Clear" />
-            <ImageView fitHeight="23.0" fitWidth="15.0" layoutX="366.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+            <Button layoutX="875.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="38.0" prefWidth="257.0" style="-fx-background-radius: 35; -fx-background-color: #A8DF8E;" text="Search" />
+            <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="99.0" prefWidth="590.0" style="-fx-background-color: #E1D7C6; -fx-background-radius: 35;">
+               <children>
+                      <Text layoutX="174.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Manage Form" wrappingWidth="328.27008056640625">
+                          <font>
+                              <Font size="30.0" />
+                          </font>
+                      </Text>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="67.0" fitWidth="78.0" layoutX="84.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/sweeping_8888289.png" />
+                  <Image url="@../assets/driving.png" />
                </image>
             </ImageView>
+            <AnchorPane layoutX="40.0" layoutY="129.0" prefHeight="257.0" prefWidth="1094.0" style="-fx-background-color: C1D0B5; -fx-background-radius: 40;">
+               <children>
+                  <AnchorPane layoutX="479.0" layoutY="174.0" prefHeight="75.0" prefWidth="606.0" style="-fx-background-color: E5E5CB; -fx-background-radius: 40;">
+                     <children>
+                            <Button fx:id="driAdd" layoutX="60.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDriAddOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: #A8DF8E;" text="Add" />
+                            <Button fx:id="driDelete" layoutX="191.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDriDeleteOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: EF6262;" text="Delete" />
+                            <Button fx:id="driUpdate" layoutX="331.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDriUpdateOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: DADDB1;" text="Update" />
+                        <Button fx:id="driClear" layoutX="462.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDriClearOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: #569DAA;" text="   Clear" />
+                     </children>
+                  </AnchorPane>
+                      <TextField fx:id="dId" layoutX="132.0" layoutY="47.0" prefHeight="35.0" prefWidth="314.0" promptText="Id" style="-fx-background-radius: 35;" />
+                      <TextField fx:id="dName" layoutX="132.0" layoutY="99.0" prefHeight="35.0" prefWidth="314.0" promptText="Name" style="-fx-background-radius: 35;" />
+                      <TextField fx:id="dAddress" layoutX="132.0" layoutY="150.0" prefHeight="35.0" prefWidth="314.0" promptText="Address" style="-fx-background-radius: 35;" />
+                      <TextField fx:id="dCon" layoutX="692.0" layoutY="47.0" prefHeight="35.0" prefWidth="314.0" promptText="Contact number" style="-fx-background-radius: 35;" />
+                  <Label layoutX="63.0" layoutY="47.0" prefHeight="26.0" prefWidth="40.0" text="Id">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="63.0" layoutY="99.0" prefHeight="26.0" prefWidth="60.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="63.0" layoutY="153.0" prefHeight="26.0" prefWidth="71.0" text="Address">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="544.0" layoutY="54.0" prefHeight="26.0" prefWidth="143.0" text="Contact Number">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="404.0" prefHeight="343.0" prefWidth="1094.0" style="-fx-background-color: C1D0B5; -fx-background-radius: 40;">
+               <children>
+                      <TableView fx:id="tblDriver" layoutX="164.0" layoutY="17.0" prefHeight="314.0" prefWidth="775.0" style="-fx-background-color: #F7FFE5;">
+                          <columns>
+                              <TableColumn fx:id="col1Id" minWidth="0.0" prefWidth="160.00006103515625" text="Driver Id" />
+                              <TableColumn fx:id="col2Name" minWidth="0.0" prefWidth="190.66668701171875" text="Driver Name" />
+                              <TableColumn fx:id="col3Add" minWidth="0.0" prefWidth="195.73330688476562" text="Driver Address" />
+                              <TableColumn fx:id="col4Con" minWidth="0.0" prefWidth="225.86663818359375" text="Contact Number" />
+                          </columns>
+                      </TableView>
+               </children>
+            </AnchorPane>
             </children>
             <opaqueInsets>
                 <Insets />
             </opaqueInsets>
         </AnchorPane>
+      <AnchorPane prefHeight="762.0" prefWidth="1175.0" style="-fx-background-color: F5F7F8; -fx-background-radius: 40;">
+         <children>
+            <Button layoutX="875.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="38.0" prefWidth="257.0" style="-fx-background-radius: 35; -fx-background-color: #A8DF8E;" text="Search" />
+            <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="99.0" prefWidth="588.0" style="-fx-background-color: #E1D7C6; -fx-background-radius: 35;">
+               <children>
+                  <Text layoutX="174.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Manage Form" wrappingWidth="328.27008056640625">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="67.0" fitWidth="78.0" layoutX="84.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/driver.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="40.0" layoutY="129.0" prefHeight="257.0" prefWidth="1094.0" style="-fx-background-color: C1D0B5; -fx-background-radius: 40;">
+               <children>
+                  <AnchorPane layoutX="479.0" layoutY="174.0" prefHeight="75.0" prefWidth="606.0" style="-fx-background-color: E5E5CB; -fx-background-radius: 40;">
+                     <children>
+                        <Button fx:id="driAdd1" layoutX="60.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDriAddOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: #A8DF8E;" text="Add" />
+                        <Button fx:id="driDelete1" layoutX="191.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDriDeleteOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: EF6262;" text="Delete" />
+                        <Button fx:id="driUpdate1" layoutX="331.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDriUpdateOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: DADDB1;" text="Update" />
+                        <Button fx:id="driClear1" layoutX="462.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDriClearOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: #569DAA;" text="   Clear" />
+                     </children>
+                  </AnchorPane>
+                  <TextField fx:id="dId1" layoutX="132.0" layoutY="42.0" prefHeight="35.0" prefWidth="314.0" promptText="Id" style="-fx-background-radius: 35;" />
+                  <TextField fx:id="dName1" layoutX="132.0" layoutY="97.0" prefHeight="35.0" prefWidth="314.0" promptText="Name" style="-fx-background-radius: 35;" />
+                  <TextField fx:id="dAddress1" layoutX="132.0" layoutY="150.0" prefHeight="35.0" prefWidth="314.0" promptText="Address" style="-fx-background-radius: 35;" />
+                  <TextField fx:id="dCon1" layoutX="692.0" layoutY="47.0" prefHeight="35.0" prefWidth="314.0" promptText="Contact number" style="-fx-background-radius: 35;" />
+                  <Label layoutX="63.0" layoutY="47.0" prefHeight="26.0" prefWidth="40.0" text="Id">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="63.0" layoutY="99.0" prefHeight="26.0" prefWidth="60.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="63.0" layoutY="153.0" prefHeight="26.0" prefWidth="71.0" text="Address">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="544.0" layoutY="54.0" prefHeight="26.0" prefWidth="143.0" text="Contact Number">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="404.0" prefHeight="343.0" prefWidth="1094.0" style="-fx-background-color: C1D0B5; -fx-background-radius: 40;">
+               <children>
+                  <TableView fx:id="tblDriver1" layoutX="164.0" layoutY="17.0" prefHeight="314.0" prefWidth="775.0" style="-fx-background-color: #F7FFE5;" stylesheets="@../css/Table.css">
+                     <columns>
+                        <TableColumn fx:id="col1Id1" minWidth="0.0" prefWidth="160.00006103515625" text="Driver Id" />
+                        <TableColumn fx:id="col2Name1" minWidth="0.0" prefWidth="190.66668701171875" text="Driver Name" />
+                        <TableColumn fx:id="col3Add1" minWidth="0.0" prefWidth="195.73330688476562" text="Driver Address" />
+                        <TableColumn fx:id="col4Con1" minWidth="0.0" prefWidth="225.86663818359375" text="Contact Number" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
     </children>
 </AnchorPane>

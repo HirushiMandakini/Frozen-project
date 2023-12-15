@@ -50,12 +50,14 @@ public class AdminNavigationbarFormController{
 
         private void loadPage() throws IOException {
                 this.pane.getChildren().clear();
-                this.pane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/customer_form.fxml")));
+                this.pane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/dashboard_form.fxml")));
         }
 
         @FXML
         void btnCustomerOnAction(ActionEvent actionEvent) throws IOException {
-              loadPage();
+                this.pane.getChildren().clear();
+                this.pane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/customer_form.fxml")));
+
         }
         @FXML
         void btnEmployeeOnAction(ActionEvent event) throws IOException {
@@ -106,7 +108,12 @@ public class AdminNavigationbarFormController{
 
         public void btnIncomeOnAction(ActionEvent actionEvent) throws IOException {
                 this.pane.getChildren().clear();
-                this.pane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/income_form.fxml")));
+                this.pane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/report_form.fxml")));
+        }
+        @FXML
+        void btnHomeOnAction(ActionEvent event) throws IOException {
+                this.pane.getChildren().clear();
+                this.pane.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/dashboard_form.fxml")));
         }
 }
 

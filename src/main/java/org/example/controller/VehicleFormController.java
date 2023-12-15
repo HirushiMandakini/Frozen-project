@@ -6,10 +6,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.example.dto.driverDto;
 import org.example.dto.supplierDto;
 import org.example.dto.tm.supplierTm;
 import org.example.dto.tm.vehicleTm;
 import org.example.dto.vehicleDto;
+import org.example.model.DriverFormModel;
 import org.example.model.VehicleFormModel;
 import java.sql.SQLException;
 import java.util.List;
@@ -155,4 +157,20 @@ public class VehicleFormController {
         }
     }
 
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+        String vIdText = vId.getText();
+        try {
+            vehicleDto dto =VehicleFormModel.searchVehicle(vIdText);
+            if (dto != null) {
+                vNum.setText(dto.getV_num());
+                vModel.setText(dto.getModel());
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again").show();
+            }
+        }catch (SQLException e){
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
+}

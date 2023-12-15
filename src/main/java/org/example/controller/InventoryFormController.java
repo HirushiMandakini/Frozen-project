@@ -8,9 +8,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.example.dto.employeeDto;
 import org.example.dto.inventoryDto;
+import org.example.dto.productDto;
 import org.example.dto.tm.inventoryTm;
 import org.example.model.InventoryFormModel;
 import org.example.controller.InventoryFormController;
+import org.example.model.ProductFormModel;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -155,7 +158,22 @@ public class InventoryFormController {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+        String iIdText = iId.getText();
+        try {
+            inventoryDto dto = InventoryFormModel.searchInventory(iIdText);
+            if (dto != null) {
+                iName.setText(dto.getName());
+                iQty.setText(String.valueOf(dto.getQty()));
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again").show();
+            }
+        }catch (SQLException e){
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    }
 
-
-}
 

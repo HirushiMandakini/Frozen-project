@@ -2,7 +2,6 @@ package org.example.model;
 
 import org.example.db.Dbconnection;
 import org.example.dto.placeOrderDto;
-
 import java.sql.*;
 import java.time.LocalDate;
 
@@ -19,18 +18,22 @@ public class OrderFormModel {
         }
         return splitOrderId(null);
     }
-
     private String splitOrderId(String currentOrderId) {
         if(currentOrderId != null) {
             String[] split = currentOrderId.split("O0");
-
             int id = Integer.parseInt(split[1]); //01
             id++;
-            return "O00" + id;
+            if(id < 10) {
+                return "O00" + id;
+            } else if (id < 100) {
+                return "O0" + id;
+            } else {
+                return "O" + id;
+            }
         } else {
             return "O001";
         }
-    }
+}
     public boolean saveOrder(placeOrderDto dto) throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
 

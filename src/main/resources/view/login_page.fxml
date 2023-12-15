@@ -8,24 +8,44 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="529.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginPageController">
+<AnchorPane fx:id="rootNode" prefHeight="526.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginPageController">
    <children>
-      <ImageView fitHeight="536.0" fitWidth="803.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="527.0" fitWidth="796.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/artistic-blurry-colorful-wallpaper-background_58702-8158.jpg" />
-         </image>
-      </ImageView>
-      <AnchorPane layoutX="216.0" layoutY="32.0" opacity="0.29" prefHeight="470.0" prefWidth="342.0" style="-fx-background-color: black;">
+         </image></ImageView>
+      <AnchorPane layoutX="219.0" layoutY="37.0" opacity="0.55" prefHeight="449.0" prefWidth="350.0" style="-fx-background-color: black;">
          <children>
-            <Label layoutX="131.0" layoutY="52.0" prefHeight="46.0" prefWidth="79.0" text="Login">
+            <Label layoutX="95.0" layoutY="122.0" prefHeight="46.0" prefWidth="146.0" text="USER LOGIN" textFill="#faf7f7">
                <font>
-                  <Font size="30.0" />
+                  <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="txtUserName" layoutX="35.0" layoutY="164.0" prefHeight="26.0" prefWidth="267.0" promptText="User Name" />
-            <TextField fx:id="txtUserPW" layoutX="35.0" layoutY="222.0" prefHeight="26.0" prefWidth="267.0" promptText="User Password" />
-            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="119.0" layoutY="316.0" onAction="#btnLoginOnAction" prefHeight="26.0" prefWidth="98.0" text="Login" />
-            <JFXButton fx:id="btnSignUp" buttonType="RAISED" layoutX="131.0" layoutY="354.0" onAction="#btnSignUpOnAction" prefHeight="26.0" prefWidth="98.0" text="SignUp" />
+            <TextField fx:id="txtUserName" layoutX="56.0" layoutY="211.0" prefHeight="26.0" prefWidth="230.0" promptText="User Name" style="-fx-background-radius: 0;" />
+            <TextField fx:id="txtUserPW" layoutX="56.0" layoutY="252.0" prefHeight="26.0" prefWidth="230.0" promptText="User Password" />
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="58.0" layoutY="318.0" onAction="#btnLoginOnAction" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: #0652DD;" text="Login" textFill="#f7f1f1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnSignUp" buttonType="RAISED" layoutX="59.0" layoutY="353.0" onAction="#btnSignUpOnAction" opacity="0.62" prefHeight="26.0" prefWidth="230.0" style="-fx-background-color: #0652DD;" text="SignUp" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="75.0" fitWidth="76.0" layoutX="131.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/user_10513764.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="14.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/user_10513764.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/key_9201741.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

@@ -8,7 +8,7 @@ import lombok.*;
 @ToString
 
 public class deliveryDto {
- private String id;
- private String address;
+ private String deli_id;
+ private String deli_address;
  private String driver_id;
 }

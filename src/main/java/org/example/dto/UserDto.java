@@ -10,7 +10,7 @@ import lombok.*;
 @ToString
 
 public class UserDto {
-    private String u_id;
+    private String u_name;
     private String u_password;
     private String u_email;
 

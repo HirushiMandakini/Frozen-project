@@ -2,6 +2,7 @@ package org.example.model;
 
 import org.example.db.Dbconnection;
 import org.example.dto.productDto;
+import org.example.dto.supplierDto;
 import org.example.dto.tm.cartTm;
 
 import java.sql.Connection;
@@ -42,8 +43,8 @@ public class ProductFormModel {
         String sql = "INSERT INTO products VALUES(?,?,?)";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
-        pstm.setString(1, dto.getId());
-        pstm.setString(2, dto.getName());
+        pstm.setString(1, dto.getP_id());
+        pstm.setString(2, dto.getP_name());
         pstm.setDouble(3, dto.getPrice());
 
         boolean isAdded = pstm.executeUpdate() > 0;
@@ -60,7 +61,7 @@ public class ProductFormModel {
         boolean isDeleted = pstm.executeUpdate()>0;
         return isDeleted;
     }
-    public productDto searchProduct(String id) throws SQLException {
+   public static productDto searchProduct(String id) throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
         String sql = "SELECT * FROM products WHERE p_id = ?";
 
@@ -86,9 +87,9 @@ public class ProductFormModel {
         String sql = "UPDATE products SET p_name = ?,price = ? WHERE p_id=?";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
-        pstm.setString(1, dto.getName());
+        pstm.setString(1, dto.getP_name());
         pstm.setDouble(2, dto.getPrice());
-        pstm.setString(3, dto.getId());
+        pstm.setString(3, dto.getP_id());
 
         boolean isUpdated = pstm.executeUpdate() > 0;
         return isUpdated;

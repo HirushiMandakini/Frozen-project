@@ -1,8 +1,11 @@
 package org.example.model;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import org.example.db.Dbconnection;
 import org.example.dto.employeeDto;
 import org.example.dto.inventoryDto;
+import org.example.dto.productDto;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -68,5 +71,25 @@ public class InventoryFormModel {
         pstm.setString(3, dto.getId());
 
         return pstm.executeUpdate() > 0;
+    }
+    public static inventoryDto searchInventory(String id) throws SQLException {
+        Connection connection = Dbconnection.getInstance().getConnection();
+        String sql = "SELECT * FROM inventory WHERE i_id = ?";
+
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, id);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        inventoryDto dto = null;
+
+        if(resultSet.next()) {
+            dto = new inventoryDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    (int) resultSet.getDouble(3)
+            );
+        }
+        return dto;
     }
 }

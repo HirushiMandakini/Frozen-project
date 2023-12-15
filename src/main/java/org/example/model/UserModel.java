@@ -1,6 +1,7 @@
 package org.example.model;
 
 import org.example.db.Dbconnection;
+import org.example.dto.UserDto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,12 +9,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserModel {
-  /*  public static boolean saveUser(UserDto userDto) throws SQLException, ClassNotFoundException {
+    public static boolean saveUser(UserDto userDto) throws SQLException, ClassNotFoundException {
         Connection connection = Dbconnection.getInstance().getConnection();
         PreparedStatement statement = connection.prepareStatement("INSERT INTO user VALUES (?,?,?)");
-        statement.setObject(1, userDto.getEmail());
-        statement.setObject(2, userDto.getName());
-        statement.setObject(3, userDto.getPassword());
+        statement.setObject(3, userDto.getU_email());
+        statement.setObject(2, userDto.getU_password());
+        statement.setObject(1, userDto.getU_name());
 
         int i = statement.executeUpdate();
         return 0 < i;
@@ -44,6 +45,6 @@ public class UserModel {
             Dbconnection.email = resultSet.getString(3);
         }
         return userName.equals(schemaUserName) && pw.equals(schemaPassword);
-}*/
+}
 }
 

@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -13,86 +14,80 @@
 
 <AnchorPane prefHeight="616.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.CustomerFormController">
     <children>
-        <AnchorPane prefHeight="616.0" prefWidth="762.0" style="-fx-background-color: #FCF8E8;">
+        <AnchorPane prefHeight="762.0" prefWidth="1175.0" style="-fx-background-color: F5F7F8; -fx-background-radius: 40;">
             <children>
-                <Text layoutX="47.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Manage Form" wrappingWidth="233.3367919921875">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                </Text>
-                <Text layoutX="47.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id" wrappingWidth="73.336669921875">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <Text layoutX="47.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name" wrappingWidth="64.53668212890625">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <Text layoutX="47.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Address" wrappingWidth="64.53668212890625">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <Text layoutX="410.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Email " wrappingWidth="64.53668212890625">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <TextField fx:id="txtEmail" layoutX="499.0" layoutY="67.0" prefHeight="26.0" prefWidth="194.0" />
-                <TextField fx:id="txtId" layoutX="132.0" layoutY="68.0" prefHeight="26.0" prefWidth="194.0" />
-                <TextField fx:id="txtName" layoutX="132.0" layoutY="106.0" prefHeight="26.0" prefWidth="194.0" />
-                <TextField fx:id="txtAdd" layoutX="132.0" layoutY="152.0" prefHeight="26.0" prefWidth="194.0" />
-                <Text layoutX="410.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number" wrappingWidth="64.53668212890625">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <TextField fx:id="txtCon" layoutX="499.0" layoutY="106.0" prefHeight="26.0" prefWidth="194.0" />
-                <Button layoutX="112.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnCusAddOnAction" prefHeight="32.0" prefWidth="65.0" text="Add">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/plus.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button layoutX="229.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnCusUpdateOnAction" prefHeight="32.0" prefWidth="80.0" text="Update">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/refresh.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <TableView fx:id="tblCustomer" layoutY="308.0" prefHeight="307.0" prefWidth="763.0" style="-fx-background-color: #F7FFE5;">
-                    <columns>
-                        <TableColumn fx:id="colId" minWidth="0.0" prefWidth="149.60003662109375" text="Customer Id" />
-                        <TableColumn fx:id="colName" minWidth="0.0" prefWidth="149.60003662109375" text="Customer Name" />
-                        <TableColumn fx:id="colAdd" minWidth="0.0" prefWidth="149.60003662109375" text="Customer Address" />
-                        <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="149.60003662109375" text="Customer Email" />
-                        <TableColumn fx:id="colCon" minWidth="0.0" prefWidth="159.20001220703125" text="Contact Number" />
-                        <TableColumn prefWidth="66.4000244140625" text="Column X" />
-                    </columns>
-                </TableView>
-                <Button layoutX="475.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnCusDeleteOnAction" prefHeight="32.0" prefWidth="80.0" text="Delete">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/delete.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-            <Button layoutX="355.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnCusClearOnAction" prefHeight="32.0" prefWidth="80.0" text="     Clear" />
-            <ImageView fitHeight="27.0" fitWidth="18.0" layoutX="364.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assets/sweeping_8888289.png" />
-               </image>
-            </ImageView>
+            <AnchorPane layoutX="40.0" layoutY="129.0" prefHeight="257.0" prefWidth="1094.0" style="-fx-background-radius: 40; -fx-background-color: C1D0B5;">
+               <children>
+                      <TextField fx:id="txtName" layoutX="132.0" layoutY="97.0" prefHeight="35.0" prefWidth="314.0" promptText="Name" style="-fx-background-radius: 35;" />
+                      <TextField fx:id="txtAdd" layoutX="132.0" layoutY="150.0" prefHeight="35.0" prefWidth="314.0" promptText="Address" style="-fx-background-radius: 35;" />
+                      <TextField fx:id="txtId" layoutX="132.0" layoutY="42.0" prefHeight="35.0" prefWidth="314.0" promptText="Id" style="-fx-background-radius: 35;" />
+                      <TextField fx:id="txtCon" layoutX="692.0" layoutY="47.0" prefHeight="35.0" prefWidth="314.0" promptText="Contact number" style="-fx-background-radius: 35;" />
+                  <AnchorPane layoutX="41.0" layoutY="-100.0" prefHeight="62.0" prefWidth="200.0" />
+                  <AnchorPane layoutX="479.0" layoutY="174.0" prefHeight="75.0" prefWidth="606.0" style="-fx-background-color: E5E5CB; -fx-background-radius: 40;">
+                     <children>
+                            <Button layoutX="60.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnCusAddOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: #A8DF8E;" text="Add" />
+                            <Button layoutX="191.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnCusDeleteOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: EF6262;" text="Delete" />
+                            <Button layoutX="331.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnCusUpdateOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: DADDB1;" text="Update" />
+                        <Button layoutX="462.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnCusClearOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: #569DAA;" text="     Clear" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="63.0" layoutY="47.0" prefHeight="26.0" prefWidth="31.0" text="Id">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="63.0" layoutY="99.0" prefHeight="26.0" prefWidth="54.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="544.0" layoutY="54.0" prefHeight="18.0" prefWidth="136.0" text="Contact Number">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="63.0" layoutY="153.0" prefHeight="26.0" prefWidth="72.0" text="Address">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                      <TextField fx:id="txtEmail" layoutX="692.0" layoutY="95.0" prefHeight="35.0" prefWidth="314.0" promptText="Email" style="-fx-background-radius: 35;" />
+                  <Label layoutX="544.0" layoutY="99.0" prefHeight="26.0" prefWidth="72.0" text="Email">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="404.0" prefHeight="343.0" prefWidth="1094.0" style="-fx-background-color: C1D0B5; -fx-background-radius: 40;">
+               <children>
+                      <TableView fx:id="tblCustomer" layoutX="77.0" layoutY="18.0" prefHeight="307.0" prefWidth="938.0" style="-fx-background-color: #F7FFE5;" stylesheets="@../css/Table.css">
+                          <columns>
+                              <TableColumn fx:id="colId" minWidth="0.0" prefWidth="167.4666290283203" text="Customer Id" />
+                              <TableColumn fx:id="colName" minWidth="0.0" prefWidth="170.933349609375" text="Customer Name" />
+                              <TableColumn fx:id="colAdd" minWidth="0.0" prefWidth="201.06674194335938" text="Customer Address" />
+                              <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="186.13330078125" text="Customer Email" />
+                              <TableColumn fx:id="colCon" minWidth="0.0" prefWidth="213.33319091796875" text="Contact Number" />
+                              <TableColumn minWidth="0.0" prefWidth="0.0" text="Column X" />
+                          </columns>
+                      </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="99.0" prefWidth="588.0" style="-fx-background-color: #E1D7C6; -fx-background-radius: 35;" stylesheets="@../css/adminDashBoardNavigation.css">
+               <children>
+                      <Text layoutX="174.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Manage Form" wrappingWidth="367.7368927001953">
+                          <font>
+                              <Font size="30.0" />
+                          </font>
+                      </Text>
+                  <ImageView fitHeight="61.0" fitWidth="76.0" layoutX="82.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/target.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button layoutX="875.0" layoutY="77.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="38.0" prefWidth="257.0" style="-fx-background-radius: 35; -fx-background-color: #A8DF8E;" text="Search" />
             </children>
             <opaqueInsets>
                 <Insets />

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="delivery" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ce750ccb-665c-4070-af3e-0050d3cd1d5b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter1"/>
+	<queryString language="SQL">
+		<![CDATA[select * from delivery;]]>
+	</queryString>
+	<field name="deli_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="deli_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="deli_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="delivery"/>
+	</field>
+	<field name="deli_address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="deli_address"/>
+		<property name="com.jaspersoft.studio.field.label" value="deli_address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="delivery"/>
+	</field>
+	<field name="driver_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="driver_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="driver_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="delivery"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="148" y="35" width="276" height="40" uuid="81aa5d03-4011-4856-8210-d54cb5b17ac5"/>
+				<textElement textAlignment="Left">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DELIVERY REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="58" y="0" width="146" height="30" uuid="5066f169-3e88-43de-af69-42b15acafa23">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a56804ae-21e5-4bc8-8648-e7888d2b829e"/>
+				</reportElement>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DELIVERY ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="0" width="100" height="60" uuid="a169d4fe-2e40-4889-8d07-9bee1cdc6ca0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e072506-7334-4187-97ca-8251dc741ff6"/>
+				</reportElement>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DELIVERY ADDRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="0" width="100" height="60" uuid="f7e89b25-55fa-4d5f-99e5-65229c36d0cb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="50655f6b-675e-4a7e-a67b-2f1e5378e006"/>
+				</reportElement>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DRIVER ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="75" y="2" width="100" height="30" uuid="205eeee4-d7c5-4744-bbc7-129d0a87784e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a56804ae-21e5-4bc8-8648-e7888d2b829e"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deli_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="100" height="30" uuid="84b1f80f-c067-486f-bed4-24fe25483443">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e072506-7334-4187-97ca-8251dc741ff6"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deli_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="2" width="100" height="30" uuid="73fa3818-4a46-4576-b25e-161740f287ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="50655f6b-675e-4a7e-a67b-2f1e5378e006"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{driver_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

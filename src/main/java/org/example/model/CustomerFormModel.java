@@ -2,6 +2,7 @@ package org.example.model;
 
 import org.example.db.Dbconnection;
 import org.example.dto.customerDto;
+import org.example.dto.driverDto;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class CustomerFormModel {
 
-    public List<customerDto> getAllCustomer() throws SQLException{
+    public static List<customerDto> getAllCustomer() throws SQLException{
             Connection connection = Dbconnection.getInstance().getConnection();
 
             String sql = "SELECT * FROM customer";
@@ -76,6 +77,22 @@ public class CustomerFormModel {
         return pstm.executeUpdate() > 0;
 
     }
+    public static customerDto searchCustomer(String id) throws Exception {
+        Connection connection= Dbconnection.getInstance().getConnection();
+        String sql="SELECT * FROM customer WHERE cus_id=?";
+        PreparedStatement pstm=connection.prepareStatement(sql);
+        pstm.setObject(1,id);
+        customerDto dto=new customerDto();
+        ResultSet rst=pstm.executeQuery();
+        if(rst.next()){
+            dto.setId(rst.getString(1));
+            dto.setName(rst.getString(2));
+            dto.setAddress(rst.getString(3));
+            dto.setEmail(rst.getString(4));
+            dto.setContact_num(rst.getString(5));
+        }
+        return dto;
+        }
 
     public static customerDto getCustomerById(String id) throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();

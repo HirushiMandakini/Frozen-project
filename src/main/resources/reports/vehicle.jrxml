@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="vehicle" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77a2020f-7c1e-4a06-bad1-2f659eb73ac7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter1"/>
+	<queryString language="SQL">
+		<![CDATA[select * from vehicle;]]>
+	</queryString>
+	<field name="v_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="v_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="v_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle"/>
+	</field>
+	<field name="model" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="model"/>
+		<property name="com.jaspersoft.studio.field.label" value="model"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle"/>
+	</field>
+	<field name="driver_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="driver_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="driver_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle"/>
+	</field>
+	<field name="v_num" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="v_num"/>
+		<property name="com.jaspersoft.studio.field.label" value="v_num"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vehicle"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="35" width="232" height="40" uuid="a4c0ed3a-d0a2-43fc-92d7-e7012e4b42a7"/>
+				<textElement textAlignment="Left">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VEHICLE REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="100" height="30" uuid="25c06c7f-66ac-4eea-b989-45ff1f38195d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ee40c178-a6be-4a22-bd1f-ad9355f0ba4f"/>
+				</reportElement>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VEHICLE ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="0" width="100" height="30" uuid="d87acf23-bba6-419a-a34d-b0030168cf36">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6434d4c0-2838-4067-b52f-757fb64c942d"/>
+				</reportElement>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="30" uuid="0161236d-2397-4f0b-8576-792fe1029410">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6a7a609-96ae-462d-95bc-78dc75fcb9fd"/>
+				</reportElement>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DRIVER ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="100" height="50" uuid="7ea17bed-584a-4aab-ae09-459dd403b23e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2945833c-2c9f-4204-980d-bdc95ef84d3a"/>
+				</reportElement>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VEHICLE NUMBER]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="100" height="30" uuid="264df862-f896-4bc4-a20c-b697c93f1d82">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ee40c178-a6be-4a22-bd1f-ad9355f0ba4f"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="100" height="30" uuid="ce88ddd6-7479-4b3b-9a2f-025a04d94415">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6434d4c0-2838-4067-b52f-757fb64c942d"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="0" width="100" height="30" uuid="b4bf27b2-e8fc-4876-b07e-a1c4da5ae078">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6a7a609-96ae-462d-95bc-78dc75fcb9fd"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{driver_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="2" width="100" height="30" uuid="34a3c6ea-c39d-47af-a51d-23410a753681">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2945833c-2c9f-4204-980d-bdc95ef84d3a"/>
+				</reportElement>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_num}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

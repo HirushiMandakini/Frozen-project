@@ -8,8 +8,8 @@ import lombok.*;
     @ToString
 
     public class deliveryTm {
-        private String id;
-        private String address;
+        private String deli_id;
+        private String deli_address;
         private String driver_id;
     }
 

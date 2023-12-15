@@ -11,6 +11,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
+import org.example.db.Dbconnection;
 import org.example.dto.customerDto;
 import org.example.dto.placeOrderDto;
 import org.example.dto.productDto;
@@ -21,6 +26,8 @@ import org.example.model.PlaceOrderModel;
 import org.example.model.ProductFormModel;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -102,6 +109,17 @@ public class PlaceOrderFormController {
         loadProductIds();
     }
 
+  /*  private void generateOrder() {
+        try (Connection connection = Dbconnection.getInstance().getConnection()) {
+            InputStream inputStream = this.getClass().getResourceAsStream("/reports/order.jrxml");
+            JasperReport compileReport = JasperCompileManager.compileReport(inputStream);
+            JasperPrint jasperPrint = JasperFillManager.fillReport(compileReport, null, connection);
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (JRException | SQLException e) {
+            e.printStackTrace();
+        }
+    }*/
+
     private void setCellValueFactory() {
         col1ProId.setCellValueFactory(new PropertyValueFactory<>("id"));
         col2proName.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -125,7 +143,7 @@ public class PlaceOrderFormController {
             List<productDto> productDtos = ProductFormModel.loadAllProduct();
 
             for (productDto dto : productDtos) {
-                obList.add(dto.getId());
+                obList.add(dto.getP_id());
             }
             cmboProductId.setItems(obList);
         } catch (SQLException e) {
@@ -225,6 +243,9 @@ public class PlaceOrderFormController {
     }
     @FXML
     void btnPlaceOrderOnAction(ActionEvent event) {
+
+
+     //   generateOrder();
         String orderId = lbloId.getText();
         LocalDate date = LocalDate.parse(lblDate.getText());
         String id = comboCusId.getValue();
@@ -254,10 +275,12 @@ public class PlaceOrderFormController {
         txtQty.requestFocus();
         try {
             productDto dto = productModel.searchProduct(code);
-            lblPName.setText(dto.getName());
+            lblPName.setText(dto.getP_name());
             lblUnitPrice.setText(String.valueOf(dto.getPrice()));
 
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
@@ -276,6 +299,8 @@ public class PlaceOrderFormController {
     void txtQtyOnAction(ActionEvent event) {
         btnAddToCartOnAction(event);
     }
-}
+
+    }
+
 
 

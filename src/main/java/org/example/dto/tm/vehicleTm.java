@@ -8,6 +8,7 @@ import lombok.*;
 
 public class vehicleTm {
     private String v_id;
-    private String v_num;
     private String model;
+    private String v_num;
+
 }

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DriverFormModel {
-    public List<driverDto> getAllDriver() throws SQLException {
+    public static List<driverDto> getAllDriver() throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
 
         String sql = "SELECT * FROM driver";
@@ -33,6 +33,7 @@ public class DriverFormModel {
         }
         return dtoList;
     }
+
     public static boolean addDriver(driverDto dto) throws SQLException{
         Connection connection = Dbconnection.getInstance().getConnection();
 
@@ -70,5 +71,27 @@ public class DriverFormModel {
         pstm.setString(4,dto.getId());
 
         return pstm.executeUpdate() > 0;
+    }
+
+    public static driverDto searchDriver(String id) throws SQLException {
+        Connection connection = Dbconnection.getInstance().getConnection ();
+
+        String sql = "SELECT * FROM driver WHERE driver_id = ?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, id);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        driverDto dto = null;
+
+        if(resultSet.next()) {
+            String driver_id = resultSet.getString(1);
+            String driver_name = resultSet.getString(2);
+            String driver_address = resultSet.getString(3);
+            String contact_num = resultSet.getString(4);
+
+            dto = new driverDto(driver_id, driver_name, driver_address, contact_num);
+        }
+        return dto;
     }
 }

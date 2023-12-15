@@ -1,6 +1,7 @@
 package org.example.model;
 
 import org.example.db.Dbconnection;
+import org.example.dto.customerDto;
 import org.example.dto.employeeDto;
 
 import java.sql.Connection;
@@ -11,7 +12,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 public class EmployeeFormModel {
-    public List<employeeDto> getAllEmployee() throws SQLException{
+    public static List<employeeDto> getAllEmployee() throws SQLException{
         Connection connection = Dbconnection.getInstance().getConnection();
 
         String sql = "SELECT * FROM user";
@@ -72,5 +73,21 @@ public class EmployeeFormModel {
         pstm.setString(5,dto.getId());
 
         return pstm.executeUpdate() > 0;
+    }
+    public static employeeDto searchEmployee(String id) throws Exception {
+        Connection connection= Dbconnection.getInstance().getConnection();
+        String sql="SELECT * FROM user WHERE u_id=?";
+        PreparedStatement pstm=connection.prepareStatement(sql);
+        pstm.setObject(1,id);
+        employeeDto dto=new employeeDto();
+        ResultSet rst=pstm.executeQuery();
+        if(rst.next()){
+            dto.setId(rst.getString(1));
+            dto.setName(rst.getString(2));
+            dto.setAddress(rst.getString(3));
+            dto.setGmail(rst.getString(4));
+            dto.setContact_num(rst.getString(5));
+        }
+        return dto;
     }
 }

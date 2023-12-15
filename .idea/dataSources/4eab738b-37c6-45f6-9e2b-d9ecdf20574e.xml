@@ -1103,7 +1103,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>2</Position>
     </column>
     <column id="316" parent="301" name="u_email">
-      <DasType>varchar(10)|0s</DasType>
+      <DasType>varchar(100)|0s</DasType>
       <Position>3</Position>
     </column>
     <index id="317" parent="301" name="PRIMARY">
@@ -1130,7 +1130,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>3</Position>
     </column>
     <column id="322" parent="302" name="cus_gmail">
-      <DasType>varchar(20)|0s</DasType>
+      <DasType>varchar(200)|0s</DasType>
       <Position>4</Position>
     </column>
     <column id="323" parent="302" name="contact_num">
@@ -1195,7 +1195,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>3</Position>
     </column>
     <column id="336" parent="304" name="contact_num">
-      <DasType>int|0s</DasType>
+      <DasType>varchar(40)|0s</DasType>
       <Position>4</Position>
     </column>
     <index id="337" parent="304" name="PRIMARY">
@@ -1343,7 +1343,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>1</Position>
     </column>
     <column id="367" parent="309" name="p_name">
-      <DasType>varchar(15)|0s</DasType>
+      <DasType>varchar(150)|0s</DasType>
       <Position>2</Position>
     </column>
     <column id="368" parent="309" name="price">

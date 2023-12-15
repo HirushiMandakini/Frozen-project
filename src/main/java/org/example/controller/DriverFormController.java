@@ -8,10 +8,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.example.dto.driverDto;
 import org.example.dto.employeeDto;
+import org.example.dto.inventoryDto;
 import org.example.dto.tm.driverTm;
 import org.example.dto.tm.employeeTm;
 import org.example.model.DriverFormModel;
 import org.example.model.EmployeeFormModel;
+import org.example.model.InventoryFormModel;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -65,8 +67,9 @@ public class DriverFormController {
     private DriverFormModel driverModel = new DriverFormModel();
 
     public void initialize(){
-        setCellValueFactory();
         loadAllDriver();
+        setCellValueFactory();
+
     }
     private void setCellValueFactory() {
         col1Id.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -74,13 +77,14 @@ public class DriverFormController {
         col3Add.setCellValueFactory(new PropertyValueFactory<>("address"));
         col4Con.setCellValueFactory(new PropertyValueFactory<>("contact_num"));
     }
-    private void loadAllDriver() {
+
+    private void loadAllDriver(){
         var model = new DriverFormModel();
 
         ObservableList<driverTm> obList = FXCollections.observableArrayList();
 
         try{
-            List<driverDto> dtoList = model.getAllDriver();
+            List<driverDto> dtoList = DriverFormModel.getAllDriver();
             for (driverDto dto : dtoList){
                 obList.add(
                         new driverTm(
@@ -97,7 +101,7 @@ public class DriverFormController {
         }
     }
     @FXML
-    void btnDriAddOnAction(ActionEvent event) {
+    void btnDriAddOnAction(ActionEvent event){
         String id = dId.getText();
         String name = dName.getText();
         String address = dAddress.getText();
@@ -165,5 +169,22 @@ public class DriverFormController {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+        String dIdText = dId.getText();
+        try {
+            driverDto dto = DriverFormModel.searchDriver(dIdText);
+            if (dto != null) {
+                dName.setText(dto.getName());
+                dAddress.setText(dto.getAddress());
+                dCon.setText(String.valueOf(dto.getContact_num()));
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again").show();
+            }
+        }catch (SQLException e){
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    }
 
-}

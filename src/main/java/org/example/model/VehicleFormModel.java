@@ -2,6 +2,7 @@ package org.example.model;
 
 import org.example.db.Dbconnection;
 import org.example.dto.employeeDto;
+import org.example.dto.inventoryDto;
 import org.example.dto.vehicleDto;
 import org.example.model.VehicleFormModel;
 import java.sql.Connection;
@@ -62,10 +63,30 @@ public class VehicleFormModel {
         String sql = "UPDATE  vehicle SET  v_num = ?,model = ? WHERE v_id=?";
         PreparedStatement pstm = connection.prepareStatement(sql);
 
-        pstm.setString(2, dto.getV_num());
-        pstm.setString(1, dto.getModel());
+        pstm.setString(1, dto.getV_num());
+        pstm.setString(2, dto.getModel());
         pstm.setString(3, dto.getV_id());
 
         return pstm.executeUpdate() > 0;
+    }
+    public static vehicleDto searchVehicle(String id) throws SQLException {//1-id,2-
+        Connection connection = Dbconnection.getInstance().getConnection();
+        String sql = "SELECT * FROM vehicle WHERE v_id = ?";
+
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, id);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        vehicleDto dto = null;
+
+        if(resultSet.next()) {
+            dto = new vehicleDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(4)
+            );
+        }
+        return dto;
     }
 }

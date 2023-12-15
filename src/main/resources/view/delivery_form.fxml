@@ -15,71 +15,68 @@
 
 <AnchorPane prefHeight="616.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.DeliveryFormController">
     <children>
-        <AnchorPane prefHeight="616.0" prefWidth="762.0" style="-fx-background-color: #FCF8E8;">
+        <AnchorPane prefHeight="762.0" prefWidth="1175.0" style="-fx-background-color: F5F7F8; -fx-background-radius: 40;">
             <children>
-                <Text layoutX="47.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Manage Form" wrappingWidth="233.3367919921875">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                </Text>
-                <Text layoutX="46.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Id" wrappingWidth="73.336669921875">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <Text layoutX="378.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Id" wrappingWidth="51.736663818359375">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-                <TextField fx:id="txtDeliveryId" layoutX="119.0" layoutY="83.0" prefHeight="26.0" prefWidth="194.0" />
-                <TextField fx:id="txtDeliveryAddress" layoutX="119.0" layoutY="135.0" prefHeight="26.0" prefWidth="194.0" />
-                <Button layoutX="139.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnDelAddOnAction" prefHeight="32.0" prefWidth="65.0" text="Add">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/plus.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button layoutX="298.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnDelUpdateOnAction" prefHeight="32.0" prefWidth="80.0" text="Update">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/refresh.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <TableView fx:id="tblDelivery" layoutX="111.0" layoutY="285.0" prefHeight="330.0" prefWidth="534.0" style="-fx-background-color: #F7FFE5;">
-                    <columns>
-                        <TableColumn fx:id="col1Id" minWidth="0.0" prefWidth="172.7999267578125" text="Delivery Id" />
-                        <TableColumn fx:id="col2DeliveryAddress" minWidth="0.0" prefWidth="186.39999389648438" text="Delivery Address" />
-                        <TableColumn fx:id="col3DriverId" minWidth="0.0" prefWidth="173.5999755859375" text="Driver Id" />
-                    </columns>
-                </TableView>
-                <Button layoutX="479.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnDelDeleteOnAction" prefHeight="32.0" prefWidth="80.0" text="Delete">
-                    <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../assets/delete.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Text layoutX="47.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Address" wrappingWidth="51.736663818359375">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Text>
-            <ComboBox fx:id="cmbDriverId" layoutX="444.0" layoutY="84.0" prefWidth="150.0" />
-            <Text layoutX="378.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Name" wrappingWidth="73.336669921875">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Text>
-            <Label fx:id="lblDriverName" layoutX="465.0" layoutY="139.0" prefHeight="18.0" prefWidth="150.0" />
+            <AnchorPane layoutX="40.0" layoutY="404.0" prefHeight="343.0" prefWidth="1094.0" style="-fx-background-color: C1D0B5; -fx-background-radius: 40;">
+               <children>
+                      <TableView fx:id="tblDelivery" layoutX="164.0" layoutY="17.0" prefHeight="312.0" prefWidth="760.0" style="-fx-background-color: #F7FFE5;" stylesheets="@../css/Table.css">
+                          <columns>
+                              <TableColumn fx:id="col1Id" minWidth="0.0" prefWidth="223.9999542236328" text="Delivery Id" />
+                              <TableColumn fx:id="col2DeliveryAddress" minWidth="0.0" prefWidth="280.0000305175781" text="Delivery Address" />
+                              <TableColumn fx:id="col3DriverId" minWidth="0.0" prefWidth="255.46661376953125" text="Driver Id" />
+                          </columns>
+                      </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="129.0" prefHeight="257.0" prefWidth="1094.0" style="-fx-background-color: C1D0B5; -fx-background-radius: 40;">
+               <children>
+                      <Text layoutX="103.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Id" wrappingWidth="96.8033447265625">
+                          <font>
+                              <Font name="System Bold" size="16.0" />
+                          </font>
+                      </Text>
+                  <Label fx:id="lblDeliveryId" layoutX="197.0" layoutY="44.0" prefHeight="18.0" prefWidth="165.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <ComboBox fx:id="cmbDriverId" layoutX="519.0" layoutY="46.0" onAction="#cmbDriverOnAction" prefHeight="35.0" prefWidth="314.0" promptText="Driver Id" style="-fx-background-radius: 35;" />
+                      <TextField fx:id="txtDeliveryAddress" layoutX="100.0" layoutY="100.0" prefHeight="35.0" prefWidth="314.0" promptText="Address" style="-fx-background-radius: 35;" />
+                  <AnchorPane layoutX="807.0" layoutY="174.0" prefHeight="75.0" prefWidth="274.0" style="-fx-background-color: E5E5CB; -fx-background-radius: 35;">
+                     <children>
+                        <Button layoutX="41.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnDelAddOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: #A8DF8E;" text="Add" />
+                        <Button layoutX="156.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnDelUpdateOnAction" prefHeight="32.0" prefWidth="80.0" style="-fx-background-radius: 35; -fx-background-color: #569DAA;" text="Clear" />
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="lblDriverName" layoutX="639.0" layoutY="105.0" prefHeight="18.0" prefWidth="150.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Text layoutX="524.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver Name" wrappingWidth="106.4033203125">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="68.0" fitWidth="76.0" layoutX="40.0" layoutY="-97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/delivery.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="13.0" layoutY="13.0" prefHeight="99.0" prefWidth="588.0" style="-fx-background-color: #E1D7C6; -fx-background-radius: 35;">
+               <children>
+                      <Text layoutX="174.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Manage Form" wrappingWidth="316.5367431640625">
+                          <font>
+                              <Font size="30.0" />
+                          </font>
+                      </Text>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="68.0" fitWidth="82.0" layoutX="78.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/delivery.png" />
+               </image>
+            </ImageView>
             </children>
             <opaqueInsets>
                 <Insets />

@@ -3,6 +3,7 @@ package org.example.model;
 
 import org.example.db.Dbconnection;
 import org.example.dto.customerDto;
+import org.example.dto.employeeDto;
 import org.example.dto.supplierDto;
 
 import java.sql.Connection;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SupplierFormModel {
-    public List<supplierDto> getAllSupplier() throws SQLException {
+    public static List<supplierDto> getAllSupplier() throws SQLException {
         Connection connection = Dbconnection.getInstance().getConnection();
 
         String sql = "SELECT * FROM supplier";
@@ -76,6 +77,22 @@ public class SupplierFormModel {
 
         boolean isUpdated = pstm.executeUpdate() > 0;
         return isUpdated;
+    }
+    public static supplierDto searchSupplier(String id) throws Exception {
+        Connection connection= Dbconnection.getInstance().getConnection();
+        String sql="SELECT * FROM supplier WHERE sup_id=?";
+        PreparedStatement pstm=connection.prepareStatement(sql);
+        pstm.setObject(1,id);
+        supplierDto dto=new supplierDto();
+        ResultSet rst=pstm.executeQuery();
+        if(rst.next()){
+            dto.setId(rst.getString(1));
+            dto.setName(rst.getString(2));
+            dto.setAddress(rst.getString(3));
+            dto.setContact_num(rst.getString(4));
+            dto.setGmail(rst.getString(5));
+        }
+        return dto;
     }
 
 }

@@ -110,19 +110,20 @@ public class EmployeeFormController {
     }
     @FXML
     void btnEmpAddOnAction(ActionEvent event) {
-  /*      boolean isEmployeeIDValidated = ValidateEmployee();
+        boolean isEmployeeIDValidated = ValidateEmployee();
         boolean isEmployeeNameValidated = ValidateEmployee();
         boolean isEmployeeAddressValidated = ValidateEmployee();
         boolean isEmployeeTelValidated = ValidateEmployee();
+        boolean isEmployeeGmailValidated = ValidateEmployee();
 
-        if (isEmployeeIDValidated && isEmployeeNameValidated && isEmployeeAddressValidated && isEmployeeTelValidated) {*/
+        if (isEmployeeIDValidated && isEmployeeNameValidated && isEmployeeAddressValidated && isEmployeeTelValidated && isEmployeeGmailValidated ) {
             String id = eId.getText();
             String name = eName.getText();
             String address = eAdd.getText();
             String email = eEmail.getText();
             String contact_num = eCon.getText();
 
-            var dto = new employeeDto(id, name, address, email, contact_num);
+            var dto = new employeeDto(id, name, address,email,contact_num);
             try {
                 boolean isSaved = empModel.addEmployee(dto);
                 if (isSaved) {
@@ -138,39 +139,39 @@ public class EmployeeFormController {
             } catch (SQLException e) {
                 new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             }
-   //  }
+    }
         }
         private boolean ValidateEmployee(){
 
             String idText = eId.getText();
-            boolean isCustomerIDValidated = Pattern.compile("[E][0-9]{3}").matcher(idText).matches();
+            boolean isEmployeeIDValidated = Pattern.compile("[E][0-9]{3,}").matcher(idText).matches();
 
-            if (!isCustomerIDValidated) {
+            if (!isEmployeeIDValidated) {
                 new Alert(Alert.AlertType.ERROR, "invalid employee id!").show();
                 return false;
             }
             String nameText = eName.getText();
-            boolean isCustomerNameValidated = Pattern.compile("[A-z](.*)").matcher(nameText).matches();
-            if (!isCustomerNameValidated) {
+            boolean isEmployeeNameValidated = Pattern.compile("[A-z]{2,}").matcher(nameText).matches();
+            if (!isEmployeeNameValidated) {
                 new Alert(Alert.AlertType.ERROR, "invalid employee name!").show();
                 return false;
             }
             String addressText = eAdd.getText();
-            boolean isCustomerAddressValidated = Pattern.compile("[A-z][0-9](.*)").matcher(addressText).matches();
-            if (!isCustomerAddressValidated) {
-                new Alert(Alert.AlertType.ERROR, "invalid customer address!").show();
-                return false;
-            }
-            String emailText = eEmail.getText();
-            boolean isCustomerEmailValidated = Pattern.compile("[A-z][0-9]{10}").matcher(emailText).matches();
-            if (!isCustomerEmailValidated) {
-                new Alert(Alert.AlertType.ERROR, "invalid customer Email!").show();
+            boolean isEmployeeAddressValidated = Pattern.compile("[A-z]{2,}").matcher(addressText).matches();
+            if (!isEmployeeAddressValidated) {
+                new Alert(Alert.AlertType.ERROR, "invalid employee address!").show();
                 return false;
             }
             String contact_num = eCon.getText();
-            boolean isCustomerConValidated = Pattern.compile("[0-9]{12}").matcher(contact_num).matches();
-            if (!isCustomerConValidated) {
-                new Alert(Alert.AlertType.ERROR, "invalid customer Contact Number!").show();
+            boolean isEmployeeConValidated = Pattern.compile("[0-9]{10,}").matcher(contact_num).matches();
+            if (!isEmployeeConValidated) {
+                new Alert(Alert.AlertType.ERROR, "invalid employee Contact Number!").show();
+                return false;
+            }
+            String emailText = eEmail.getText();
+            boolean isEmployeeEmailValidated = Pattern.compile("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])").matcher(emailText).matches();
+            if (!isEmployeeEmailValidated) {
+                new Alert(Alert.AlertType.ERROR, "invalid employee Email!").show();
                 return false;
             }
             return true;
@@ -217,6 +218,24 @@ public class EmployeeFormController {
         }
     }
 
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+        String id = eId.getText();
+        try {
+            employeeDto dto = EmployeeFormModel.searchEmployee(id);
+            if (dto != null) {
+                eName.setText(dto.getName());
+                eAdd.setText(dto.getAddress());
+                eEmail.setText(dto.getGmail());
+                eCon.setText(dto.getContact_num());
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again").show();
+            }
+        }catch (SQLException e){
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
+}
 
 
