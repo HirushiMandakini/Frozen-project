@@ -17,8 +17,6 @@ import org.example.model.SupplierFormModel;
 
 import java.sql.SQLException;
 import java.util.List;
-
-
 public class ProductFormController {
 
         @FXML
@@ -79,19 +77,16 @@ public class ProductFormController {
                         setData(newValue);
                 });
         }
-
         private void setData(productTm row) {
                 pId.setText(row.getP_id());
                 pName.setText(row.getP_name());
                 pPrice.setText(String.valueOf(row.getPrice()));
         }
-
         private void setCellValueFactory() {
                 col1Id.setCellValueFactory(new PropertyValueFactory<>("p_id"));
                 col2NAme.setCellValueFactory(new PropertyValueFactory<>("p_name"));
                 col3Price.setCellValueFactory(new PropertyValueFactory<>("Price"));
         }
-
         @FXML
         void btnProAddOnAction(ActionEvent event) {
                 String pIdText = pId.getText();

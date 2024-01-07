@@ -4,144 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266f7d74-3870-4c5f-b4f7-ec8fefc0e863" name="Changes" comment="PlaceOrderFormController">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/DashboardForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ReportFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mail/mail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/7ftT.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/Sparkling Blueberry Lemonade.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/backward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/basket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/courier.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/delivery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/download.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/drink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/driving.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/employee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/fleet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/fruit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/hatchback-car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/hourglass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/income.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/kitchen ghosts_ Photo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/p1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/p2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/p3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/p4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/p5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/p6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/pexels-miguel-á-padriñán-255379.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/protection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/public-service.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/strawberry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/summer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/target.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tenor.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/Admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/Table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/adminDashBoardNavigation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/image.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/Employee1.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/customer123.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/delivery.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/inventory.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/neworder.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/product1.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/supplier.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/vehicle.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/report_form.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/supplier.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4eab738b-37c6-45f6-9e2b-d9ecdf20574e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4eab738b-37c6-45f6-9e2b-d9ecdf20574e.xml" afterDir="false" />
+    <list default="true" id="266f7d74-3870-4c5f-b4f7-ec8fefc0e863" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminNavigationbarFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminNavigationbarFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/CustomerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CustomerFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/DeliveryFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/DeliveryFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/DriverFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/DriverFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/EmployeeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/EmployeeFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/InventoryFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/InventoryFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/PlaceOrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/PlaceOrderFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ProductFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ProductFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/SignupFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/SignupFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/SupplierFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/SupplierFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/VehicleFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/VehicleFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/db/Dbconnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/db/Dbconnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/deliveryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/deliveryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/productDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/productDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/supplierDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/supplierDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/tm/deliveryTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/tm/deliveryTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/tm/supplierTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/tm/supplierTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/tm/vehicleTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/tm/vehicleTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/vehicleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/vehicleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/CustomerFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CustomerFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/DeliveryFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DeliveryFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/DriverFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DriverFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/EmployeeFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/EmployeeFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/InventoryFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/InventoryFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/LoginFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/LoginFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/OrderFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/OrderFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/ProductFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/ProductFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/SupplierFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/SupplierFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/VehicleFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/VehicleFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/add-to-cart (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/apple-juice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/avocado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/banana-juice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/best-dragon-fruit-juice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/blueberry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/car.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/car.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/checkout.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/checkout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/cherry-juice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/data.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/delivery-bike.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/dragon-fruit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/drink_2738730.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/driver.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/driver.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/fruits_8607131.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/grape-juice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/guava.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/homemade-apple-juice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/iced-pink-cocktail-fresh-strawberries.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/jasmin-egger-NB5_8iyNMPA-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/juice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/mango.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/networking_1006541.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/orange-juice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/papaya.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/passion-fruit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/pineapple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/pomegranate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/received.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/salary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/smoothie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/supplier_8992959.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/sweeping_8888289.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/user-gear.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/admin_navigationbar_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/admin_navigationbar_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/delivery_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/delivery_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/driver_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/driver_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/inventory_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/inventory_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/place_order_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/place_order_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/product_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/product_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/signup_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/signup_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/supplier_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/supplier_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/vehicle_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/vehicle_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +41,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Champika Mendis/IdeaProjects/FROZEN_PROJECT/src/main/resources/reports&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Champika Mendis/Desktop/layered final project&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -358,6 +223,14 @@
       <workItem from="1702533128864" duration="286000" />
       <workItem from="1702551112456" duration="1481000" />
       <workItem from="1702558727478" duration="790000" />
+      <workItem from="1702616966969" duration="816000" />
+      <workItem from="1703048665350" duration="4633000" />
+      <workItem from="1703146937320" duration="53000" />
+      <workItem from="1703164814002" duration="704000" />
+      <workItem from="1704213099313" duration="356000" />
+      <workItem from="1704215825458" duration="1233000" />
+      <workItem from="1704217439976" duration="117000" />
+      <workItem from="1704261811189" duration="157000" />
     </task>
     <task id="LOCAL-00001" summary="PlaceOrderFormController">
       <option name="closed" value="true" />
@@ -375,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700545763665</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finalized the project">
+      <option name="closed" value="true" />
+      <created>1702617139471</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702617139471</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,6 +275,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PlaceOrderFormController" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlaceOrderFormController" />
+    <MESSAGE value="finalized the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalized the project" />
   </component>
 </project>
