@@ -56,7 +56,7 @@ public class DashboardForm implements Initializable {
 
     private void setValues() throws SQLException {
         lblCusCount.setText(String.valueOf(CustomerFormModel.getAllCustomer().size()));
-        lblEmpCount.setText(String.valueOf(EmployeeFormModel.getAllEmployee().size()));
+       // lblEmpCount.setText(String.valueOf(EmployeeFormModel.getAllEmployee().size()));
         lblSupCount.setText(String.valueOf(SupplierFormModel.getAllSupplier().size()));
      //   lblEmpCount.setText(String.valueOf(EmployeeFormModel.getAllEmployee().size()));
         lblProductCount.setText(String.valueOf(ProductFormModel.loadAllProduct().size()));

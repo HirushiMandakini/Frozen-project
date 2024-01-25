@@ -28,12 +28,13 @@ public class EmployeeFormModel {
                             resultSet.getString(2),
                             resultSet.getString(3),
                             resultSet.getString(4),
-                            resultSet.getString(5)
+                            resultSet.getString(5)                     //"0712003356"
                     )
             );
         }
         return dtoList;
     }
+
     public static boolean addEmployee(employeeDto dto) throws SQLException{
         Connection connection = Dbconnection.getInstance().getConnection();
 

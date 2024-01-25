@@ -54,8 +54,6 @@ public class LoginPageController {
             String enteredUserName = txtUserName.getText();
             String enteredPassword = txtUserPW.getText();
 
-
-
         if(enteredUserName.isEmpty()) {
             new Alert(Alert.AlertType.INFORMATION, "username required..!!", ButtonType.OK).show();
         }else if(enteredPassword.isEmpty()) {
@@ -90,15 +88,7 @@ public class LoginPageController {
                 new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
 }
 }
-          /*  try {
-                boolean useIsExist = UserModel.isExistUser(enteredUserName,enteredPassword);
-                if (useIsExist){
 
-                    navigateToCashierNavigationFormWindow();
-                }
-            } catch (SQLException | ClassNotFoundException throwables) {
-                throwables.printStackTrace();
-            }*/
         }
     }
 

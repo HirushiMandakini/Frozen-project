@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="266f7d74-3870-4c5f-b4f7-ec8fefc0e863" name="Changes" comment="">
+    <list default="true" id="266f7d74-3870-4c5f-b4f7-ec8fefc0e863" name="Changes" comment="finalized the project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ProductFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ProductFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AppInitializerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AppInitializerWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/DashboardForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/DashboardForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/EmployeeFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/EmployeeFormModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Champika Mendis/Desktop/layered final project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Champika Mendis/Documents&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -231,6 +234,22 @@
       <workItem from="1704215825458" duration="1233000" />
       <workItem from="1704217439976" duration="117000" />
       <workItem from="1704261811189" duration="157000" />
+      <workItem from="1704601031376" duration="3060000" />
+      <workItem from="1705029493266" duration="582000" />
+      <workItem from="1705031938004" duration="1245000" />
+      <workItem from="1705033702265" duration="847000" />
+      <workItem from="1705041270337" duration="557000" />
+      <workItem from="1705042070262" duration="695000" />
+      <workItem from="1705043972742" duration="1385000" />
+      <workItem from="1705064640509" duration="631000" />
+      <workItem from="1705897715671" duration="5110000" />
+      <workItem from="1705930844622" duration="14000" />
+      <workItem from="1705973830028" duration="5525000" />
+      <workItem from="1706070674119" duration="30000" />
+      <workItem from="1706070712231" duration="26000" />
+      <workItem from="1706076664623" duration="2671000" />
+      <workItem from="1706085144773" duration="712000" />
+      <workItem from="1706105392071" duration="701000" />
     </task>
     <task id="LOCAL-00001" summary="PlaceOrderFormController">
       <option name="closed" value="true" />
@@ -256,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702617139471</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finalized the project">
+      <option name="closed" value="true" />
+      <created>1704601057515</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704601057515</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
